@@ -1,6 +1,6 @@
 package com.luv2code.SpringDemo;
 
-public interface Coach {
-    public String getDailyWorkout();
+public interface FortuneService {
+
     public String getFortuneService();
 }

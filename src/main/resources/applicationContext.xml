@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd
-    http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd">
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="myFortune"
         class="com.luv2code.SpringDemo.HappyFortuneService">
@@ -14,11 +11,17 @@
     <bean id = "myCoach"
           class="com.luv2code.SpringDemo.BaseballCoach">
         <!--Set up Constructor Injection -->
-        <constructor-arg ref="myFortune"></constructor-arg>
+        <constructor-arg ref="myFortune" />
     </bean>
 
-    <bean id = "myCricketCoach"
-    class="com.luv2code.SpringDemo.CricketCoach">
-        <property name="fortuneService" ref="myFortune"></property>
+        <bean id = "myCricketCoach"
+        class="com.luv2code.SpringDemo.CricketCoach">
+
+        <!-- Set up Setter Injection -->
+        <property name="fortuneService" ref="myFortune" />
+
+        <!-- inject literal values -->
+        <property name="emailAddress" value="luv2codejava@gmail.com" />
+        <property name="team" value="Super" />
     </bean>
 </beans>

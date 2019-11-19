@@ -17,4 +17,12 @@ public class BaseballCoach implements Coach {
     public String getFortuneService() {
         return fortuneService.getFortuneService();
     }
+
+    public void InitYohoho(){
+        System.out.println("Inside the init method InitYohoho.");
+    }
+
+    public void DestroyYayhayhay(){
+        System.out.println("Inside the destroy method DestroyYayhayhay.");
+    }
 }

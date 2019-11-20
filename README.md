@@ -1,2 +1,2 @@
 # SpringDemo
-Tuning the Spring Framework
+Spring Demo using xml configuration.
